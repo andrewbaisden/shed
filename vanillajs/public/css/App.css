@@ -28,6 +28,7 @@ body p {
   font-size: 2rem; }
 
 .container {
+  position: relative;
   max-width: 658px;
   width: 100%;
   margin: 5rem auto;
@@ -63,6 +64,28 @@ body p {
   -moz-box-shadow: 0px 2px 40px 0px #a3a3a3;
   box-shadow: 0px 2px 40px 0px #a3a3a3; }
 
+.close-btn {
+  position: absolute;
+  top: -1rem;
+  right: -1em; }
+
+.close-cross {
+  color: #ebb82f;
+  font-size: 4rem;
+  padding: 0 1rem;
+  background: #000000;
+  border-radius: 50%;
+  cursor: pointer; }
+
+.close-cross::before {
+  content: '\x';
+  cursor: pointer;
+  font-size: 4rem;
+  color: #ffffff;
+  position: relative;
+  left: 0.5rem;
+  top: -0.4rem; }
+
 .star,
 .star2,
 .star3 {
@@ -95,6 +118,11 @@ body p {
   font-size: 4rem; }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .close-btn {
+    position: inherit;
+    top: -7rem;
+    right: 0;
+    margin: 0 auto; }
   .star,
   .star2,
   .star3 {
@@ -119,6 +147,11 @@ body p {
 @media (min-width: 320px) and (max-width: 480px) {
   body h1 {
     font-size: 3rem; }
+  .close-btn {
+    position: inherit;
+    top: -7rem;
+    right: 0;
+    margin: 0 auto; }
   .star,
   .star2,
   .star3 {

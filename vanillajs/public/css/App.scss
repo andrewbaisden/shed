@@ -1,131 +1,163 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,700');
 :root {
-	--primary-bg-colour: #d8d8d8;
-	--primary-font: 'Exo 2', sans-serif;
-	--primary-font-color: #1d1d1d;
-	--container-bg-color: #ffffff;
+    --primary-bg-colour: #d8d8d8;
+    --primary-font: 'Exo 2', sans-serif;
+    --primary-font-color: #1d1d1d;
+    --container-bg-color: #ffffff;
 }
 
 html {
-	font-size: 62.5%;
-	/* font-size 1em = 10px on default browser settings */
+    font-size: 62.5%;
+    /* font-size 1em = 10px on default browser settings */
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-size: 1.6rem;
-	font-family: var(--primary-font);
-	color: var(--primary-font-color);
-	background: var(--primary-bg-colour);
-	h1 {
-		font-weight: 300;
-		font-size: 4rem;
-	}
-	p {
-		font-size: 2rem;
-	}
+    font-size: 1.6rem;
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+    background: var(--primary-bg-colour);
+    h1 {
+        font-weight: 300;
+        font-size: 4rem;
+    }
+    p {
+        font-size: 2rem;
+    }
 }
 
 .container {
-	max-width: 658px;
-	width: 100%;
-	margin: 5rem auto;
-	padding: 5rem;
-	background: var(--container-bg-color);
-	border-radius: 0.5rem;
-	text-align: center;
-	-webkit-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
-	-moz-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
-	box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
-	.container-heading,
-	.container-rate-food,
-	.container-rate-delivery,
-	.container-rate-overall {
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-gap: 4rem;
-		margin-top: 3rem;
-	}
-	.container-form-submit {
-		button {
-			background: #0021ff;
-			color: #ffffff;
-			padding: 2rem;
-			text-align: center;
-			border-radius: 1rem;
-			font-size: 2rem;
-			max-width: 300px;
-			width: 100%;
-			margin-top: 4rem;
-			cursor: pointer;
-			-webkit-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
-			-moz-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
-			box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
-		}
-	}
+    position: relative;
+    max-width: 658px;
+    width: 100%;
+    margin: 5rem auto;
+    padding: 5rem;
+    background: var(--container-bg-color);
+    border-radius: 0.5rem;
+    text-align: center;
+    -webkit-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
+    -moz-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
+    box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
+    .container-heading,
+    .container-rate-food,
+    .container-rate-delivery,
+    .container-rate-overall {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-gap: 4rem;
+        margin-top: 3rem;
+    }
+    .container-form-submit {
+        button {
+            background: #0021ff;
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 1rem;
+            font-size: 2rem;
+            max-width: 300px;
+            width: 100%;
+            margin-top: 4rem;
+            cursor: pointer;
+            -webkit-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
+            -moz-box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
+            box-shadow: 0px 2px 40px 0px rgba(163, 163, 163, 1);
+        }
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: -1rem;
+    right: -1em;
+}
+
+.close-cross {
+    color: #ebb82f;
+    font-size: 4rem;
+    padding: 0 1rem;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close-cross::before {
+    content: '\x';
+    cursor: pointer;
+    font-size: 4rem;
+    color: #ffffff;
+    position: relative;
+    left: 0.5rem;
+    top: -0.4rem;
 }
 
 .star,
 .star2,
 .star3 {
-	color: #ebb82f;
-	font-size: 4rem;
-	padding: 0 1rem;
-	/* space out the stars */
+    color: #ebb82f;
+    font-size: 4rem;
+    padding: 0 1rem;
+    /* space out the stars */
 }
 
 .star::before,
 .star2::before,
 .star3::before {
-	content: '\2605';
-	cursor: pointer;
-	font-size: 4rem;
-	color: #d4d4d4;
+    content: '\2605';
+    cursor: pointer;
+    font-size: 4rem;
+    color: #d4d4d4;
 }
 
 .star:hover::before,
 .star2:hover::before,
 .star3:hover::before {
-	/* the :hover should come first */
-	content: '\2605';
-	font-size: 4rem;
-	color: #ebb82f;
+    /* the :hover should come first */
+    content: '\2605';
+    font-size: 4rem;
+    color: #ebb82f;
 }
 
 .star.rated::before,
 .star2.rated::before,
 .star3.rated::before {
-	/* the :hover should come first */
-	content: '\2605';
-	font-size: 4rem;
+    /* the :hover should come first */
+    content: '\2605';
+    font-size: 4rem;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-	.star,
-	.star2,
-	.star3 {
-		font-size: 1.9rem;
-	}
-	.star::before,
-	.star2::before,
-	.star3::before {
-		font-size: 1.9rem;
-	}
-	.star:hover::before,
-	.star2:hover::before,
-	.star3:hover::before {
-		font-size: 1.9rem;
-	}
-	.star.rated::before,
-	.star2.rated::before,
-	.star3.rated::before {
-		font-size: 1.9rem;
-	}
+    .close-btn {
+        position: inherit;
+        top: -7rem;
+        right: 0;
+        margin: 0 auto;
+    }
+    .star,
+    .star2,
+    .star3 {
+        font-size: 1.9rem;
+    }
+    .star::before,
+    .star2::before,
+    .star3::before {
+        font-size: 1.9rem;
+    }
+    .star:hover::before,
+    .star2:hover::before,
+    .star3:hover::before {
+        font-size: 1.9rem;
+    }
+    .star.rated::before,
+    .star2.rated::before,
+    .star3.rated::before {
+        font-size: 1.9rem;
+    }
 }
 
 /* 
@@ -134,29 +166,35 @@ body {
   */
 
 @media (min-width: 320px) and (max-width: 480px) {
-	body {
-		h1 {
-			font-size: 3rem;
-		}
-	}
-	.star,
-	.star2,
-	.star3 {
-		font-size: 1.6rem;
-	}
-	.star::before,
-	.star2::before,
-	.star3::before {
-		font-size: 1.6rem;
-	}
-	.star:hover::before,
-	.star2:hover::before,
-	.star3:hover::before {
-		font-size: 1.6rem;
-	}
-	.star.rated::before,
-	.star2.rated::before,
-	.star3.rated::before {
-		font-size: 1.6rem;
-	}
+    body {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+    .close-btn {
+        position: inherit;
+        top: -7rem;
+        right: 0;
+        margin: 0 auto;
+    }
+    .star,
+    .star2,
+    .star3 {
+        font-size: 1.6rem;
+    }
+    .star::before,
+    .star2::before,
+    .star3::before {
+        font-size: 1.6rem;
+    }
+    .star:hover::before,
+    .star2:hover::before,
+    .star3:hover::before {
+        font-size: 1.6rem;
+    }
+    .star.rated::before,
+    .star2.rated::before,
+    .star3.rated::before {
+        font-size: 1.6rem;
+    }
 }
