@@ -69,6 +69,12 @@ body p {
   top: -1rem;
   right: -1em; }
 
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
 .close-cross {
   color: #ebb82f;
   font-size: 4rem;
@@ -89,7 +95,7 @@ body p {
 .star,
 .star2,
 .star3 {
-  color: #ebb82f;
+  color: green;
   font-size: 4rem;
   padding: 0 1rem;
   /* space out the stars */ }
@@ -97,18 +103,18 @@ body p {
 .star::before,
 .star2::before,
 .star3::before {
-  content: '\2605';
+  content: '\2606';
   cursor: pointer;
   font-size: 4rem;
-  color: #d4d4d4; }
+  color: #ebb82f; }
 
 .star:hover::before,
 .star2:hover::before,
 .star3:hover::before {
   /* the :hover should come first */
-  content: '\2605';
+  content: '\2606';
   font-size: 4rem;
-  color: #ebb82f; }
+  color: red; }
 
 .star.rated::before,
 .star2.rated::before,
