@@ -1,4 +1,4 @@
-# Star Rating modal component
+# Star Rating Modal Component
 
 ## VannillaJS
 

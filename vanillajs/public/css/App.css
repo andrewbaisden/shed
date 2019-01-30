@@ -1,0 +1,15 @@
+:root {
+  --primary-bg-colour: #bada55; }
+
+html {
+  font-size: 62.5%;
+  /* font-size 1em = 10px on default browser settings */ }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.6rem;
+  background: var(--primary-bg-colour); }
