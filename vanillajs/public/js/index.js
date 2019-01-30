@@ -111,7 +111,9 @@ document.querySelector('.form-submit').addEventListener('click', () => {
 	document.querySelector('.submitted').classList.remove('hide');
 	setInterval(() => {
 		document.querySelector('.submitted').classList.add('hide');
-		window.location = 'https://www.wagamama.com/';
+
+		// Redirect disabled so the code can be read in the console
+		// window.location = 'https://www.wagamama.com/';
 	}, 4000);
 });
 
@@ -119,5 +121,7 @@ let starRatingForm = document.querySelector('.container');
 
 document.querySelector('.close-btn').addEventListener('click', () => {
 	starRatingForm.classList.add('hide');
-	window.location = 'https://www.wagamama.com/';
+
+	// Redirect disabled so the code can be read in the console
+	// window.location = 'https://www.wagamama.com/';
 });

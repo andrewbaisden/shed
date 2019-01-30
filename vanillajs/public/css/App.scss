@@ -107,7 +107,6 @@ body {
 .star,
 .star2,
 .star3 {
-    color: green;
     font-size: 4rem;
     padding: 0 1rem;
     /* space out the stars */
@@ -126,9 +125,9 @@ body {
 .star2:hover::before,
 .star3:hover::before {
     /* the :hover should come first */
-    content: '\2606';
+    content: '\2605';
     font-size: 4rem;
-    color: red;
+    color: darkcyan;
 }
 
 .star.rated::before,
