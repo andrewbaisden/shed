@@ -74,7 +74,7 @@ body {
 .star2,
 .star3 {
 	color: #ebb82f;
-	font-size: 2rem;
+	font-size: 4rem;
 	padding: 0 1rem;
 	/* space out the stars */
 }
@@ -103,4 +103,60 @@ body {
 	/* the :hover should come first */
 	content: '\2605';
 	font-size: 4rem;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.star,
+	.star2,
+	.star3 {
+		font-size: 1.9rem;
+	}
+	.star::before,
+	.star2::before,
+	.star3::before {
+		font-size: 1.9rem;
+	}
+	.star:hover::before,
+	.star2:hover::before,
+	.star3:hover::before {
+		font-size: 1.9rem;
+	}
+	.star.rated::before,
+	.star2.rated::before,
+	.star3.rated::before {
+		font-size: 1.9rem;
+	}
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+	body {
+		h1 {
+			font-size: 3rem;
+		}
+	}
+	.star,
+	.star2,
+	.star3 {
+		font-size: 1.6rem;
+	}
+	.star::before,
+	.star2::before,
+	.star3::before {
+		font-size: 1.6rem;
+	}
+	.star:hover::before,
+	.star2:hover::before,
+	.star3:hover::before {
+		font-size: 1.6rem;
+	}
+	.star.rated::before,
+	.star2.rated::before,
+	.star3.rated::before {
+		font-size: 1.6rem;
+	}
 }
