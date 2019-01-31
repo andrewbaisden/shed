@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
+import FeedbackRatings from './FeedbackRatings';
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			foodTitle: 'How would you rate your food?',
+			deliveryTitle: 'How would you rate your delivery driver?',
+			overallTitle: 'How would you rate your overall experience?',
+			starOne: 'star',
+			starTwo: 'star2',
+			starThree: 'star3',
+			starListOne: 'stars',
+			starListTwo: 'stars2',
+			starListThree: 'stars3',
+			foodContainer: 'container-rate-food',
+			deliveryContainer: 'container-rate-delivery',
+			overallContainer: 'container-rate-overall'
+		};
+	}
 	componentDidMount() {
 		this.loadApp();
 	}
@@ -144,36 +163,24 @@ class App extends Component {
 						<h1>How did we do?</h1>
 						<p>Please let us know how your food delievery was. It will really help us to keep improving our service!</p>
 					</div>
-					<div className="container-rate-food">
-						<div>
-							<h2>How would you rate your food?</h2>
-						</div>
-						<div className="stars" data-rating="3">
-							<span className="star">&nbsp;</span> <span className="star">&nbsp;</span>{' '}
-							<span className="star">&nbsp;</span>
-							<span className="star">&nbsp;</span> <span className="star">&nbsp;</span>
-						</div>
-					</div>
-					<div className="container-rate-delivery">
-						<div>
-							<h2>How would you rate your delivery driver?</h2>
-						</div>
-						<div className="stars2" data-rating="3">
-							<span className="star2">&nbsp;</span> <span className="star2">&nbsp;</span>{' '}
-							<span className="star2">&nbsp;</span>
-							<span className="star2">&nbsp;</span> <span className="star2">&nbsp;</span>
-						</div>
-					</div>
-					<div className="container-rate-overall">
-						<div>
-							<h2>How would you rate your overall experience?</h2>
-						</div>
-						<div className="stars3" data-rating="3">
-							<span className="star3">&nbsp;</span> <span className="star3">&nbsp;</span>{' '}
-							<span className="star3">&nbsp;</span>
-							<span className="star3">&nbsp;</span> <span className="star3">&nbsp;</span>
-						</div>
-					</div>
+					<FeedbackRatings
+						title={this.state.foodTitle}
+						class={this.state.foodContainer}
+						starList={this.state.starListOne}
+						star={this.state.starOne}
+					/>
+					<FeedbackRatings
+						title={this.state.deliveryTitle}
+						class={this.state.deliveryContainer}
+						starList={this.state.starListTwo}
+						star={this.state.starTwo}
+					/>
+					<FeedbackRatings
+						title={this.state.overallTitle}
+						class={this.state.overallContainer}
+						starList={this.state.starListThree}
+						star={this.state.starThree}
+					/>
 					<div className="container-form-submit">
 						<button className="form-submit">Submit feedback</button>
 					</div>
