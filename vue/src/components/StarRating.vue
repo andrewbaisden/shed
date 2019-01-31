@@ -8,42 +8,24 @@
         <h1>How did we do?</h1>
         <p>Please let us know how your food delievery was. It will really help us to keep improving our service!</p>
       </div>
-      <div class="container-rate-food">
-        <div>
-          <h2>How would you rate your food?</h2>
-        </div>
-        <div class="stars" data-rating="3">
-          <span class="star">&nbsp;</span>
-          <span class="star">&nbsp;</span>
-          <span class="star">&nbsp;</span>
-          <span class="star">&nbsp;</span>
-          <span class="star">&nbsp;</span>
-        </div>
-      </div>
-      <div class="container-rate-delivery">
-        <div>
-          <h2>How would you rate your delivery driver?</h2>
-        </div>
-        <div class="stars2" data-rating="3">
-          <span class="star2">&nbsp;</span>
-          <span class="star2">&nbsp;</span>
-          <span class="star2">&nbsp;</span>
-          <span class="star2">&nbsp;</span>
-          <span class="star2">&nbsp;</span>
-        </div>
-      </div>
-      <div class="container-rate-overall">
-        <div>
-          <h2>How would you rate your overall experience?</h2>
-        </div>
-        <div class="stars3" data-rating="3">
-          <span class="star3">&nbsp;</span>
-          <span class="star3">&nbsp;</span>
-          <span class="star3">&nbsp;</span>
-          <span class="star3">&nbsp;</span>
-          <span class="star3">&nbsp;</span>
-        </div>
-      </div>
+      <FeedbackRatings
+        :title="foodTitle"
+        :starList="starListOne"
+        :star="starOne"
+        :container="foodContainer"
+      />
+      <FeedbackRatings
+        :title="deliveryTitle"
+        :starList="starListTwo"
+        :star="starTwo"
+        :container="deliveryContainer"
+      />
+      <FeedbackRatings
+        :title="overallTitle"
+        :starList="starListThree"
+        :star="starThree"
+        :container="overallContainer"
+      />
       <div class="container-form-submit">
         <button class="form-submit">Submit feedback</button>
       </div>
@@ -59,7 +41,28 @@
 </template>
 
 <script>
+import FeedbackRatings from "@/components/FeedbackRatings.vue";
+
 export default {
+  data: function() {
+    return {
+      foodTitle: "How would you rate your food?",
+      deliveryTitle: "How would you rate your delivery driver?",
+      overallTitle: "How would you rate your overall experience?",
+      starOne: "star",
+      starTwo: "star2",
+      starThree: "star3",
+      starListOne: "stars",
+      starListTwo: "stars2",
+      starListThree: "stars3",
+      foodContainer: "container-rate-food",
+      deliveryContainer: "container-rate-delivery",
+      overallContainer: "container-rate-overall"
+    };
+  },
+  components: {
+    FeedbackRatings
+  },
   mounted() {
     this.loadApp();
   },
@@ -206,7 +209,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 .container {
   position: relative;
   max-width: 658px;
