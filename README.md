@@ -1,5 +1,7 @@
 # Star Rating Modal Component
 
+This App has been created in 3 different framworks. Express, Vue and React. They are all identical.
+
 ## Node.js Express App
 
 ### Project Setup ES6
