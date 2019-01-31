@@ -50,7 +50,10 @@
     </div>
 
     <div class="container hide submitted">
-      <p>Form submitted!!! 😁</p>
+      <p>
+        Form submitted!!!
+        <span role="img" aria-label="Happy Face">😁</span>
+      </p>
     </div>
   </div>
 </template>
