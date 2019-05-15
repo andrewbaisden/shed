@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FeedbackRatings from './FeedbackRatings';
-
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -24,7 +23,7 @@ class App extends Component {
 		this.loadApp();
 	}
 	loadApp() {
-		//initial setup
+		//initial base setup
 		document.addEventListener('DOMContentLoaded', function() {
 			addListeners();
 			setRating(); //based on value inside the div
