@@ -1,6 +1,8 @@
 # Star Rating Modal Component
 
-This App has been created in 3 different framworks. Express, Vue and React. They are all identical.
+![Star Rating Modal Component](https://res.cloudinary.com/d74fh3kw/image/upload/v1582580432/star_review_zj5ijo.jpg 'Star Rating Modal Component')
+
+This App has been created in 3 different framworks. Node.js, Vue and React. They are all identical.
 
 ## Node.js Express App
 
